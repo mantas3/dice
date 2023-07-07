@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{c3730795-faa4-41bd-b57a-32410733a644}" Title="Dice" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="mantyLT" Description="Dice 1-6." Publisher="Dice" BitsPerPixel="32">
+    <IconPath IsRelative="true" IsResource="false">Dice.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_SENSORS" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="DiceToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Dice.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Dice</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

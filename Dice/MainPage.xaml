@@ -1,0 +1,44 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Dice.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Background="Black">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ttt" Text="Dice" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="_lastUpdateTime" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Text="Shake or tap!" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Tap="ContentPanel_Tap">
+            <Grid x:Name="vienas" HorizontalAlignment="Left" Height="100" Margin="28,50,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="du" HorizontalAlignment="Left" Height="100" Margin="178,50,0,0" VerticalAlignment="Top" Width="100" Opacity="0" Background="Red"/>
+            <Grid x:Name="trys" HorizontalAlignment="Left" Height="100" Margin="328,50,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="keturi" HorizontalAlignment="Left" Height="100" Margin="28,200,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="penki" HorizontalAlignment="Left" Height="100" Margin="178,200,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="sesi" HorizontalAlignment="Left" Height="100" Margin="328,200,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="septyni" HorizontalAlignment="Left" Height="100" Margin="28,350,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="astuoni" HorizontalAlignment="Left" Height="100" Margin="178,350,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <Grid x:Name="devyni" HorizontalAlignment="Left" Height="100" Margin="328,350,0,0" VerticalAlignment="Top" Width="100" Background="Red" Opacity="0"/>
+            <ProgressBar x:Name="status_line" HorizontalAlignment="Left" Height="38" Margin="28,537,0,0" VerticalAlignment="Top" Width="400" Background="#FFF90505" Foreground="#FFFB0000"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
